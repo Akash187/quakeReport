@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp">
+
+        <LinearLayout
+            android:id="@+id/layout_single_quake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/text_quake_magnitude"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/magnitude_circle"
+                android:gravity="center"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                tools:text="8.9" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_quake_offset_location"
+                    android:layout_width="match_parent"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:layout_height="wrap_content"
+                    tools:text="224KM SE of" />
+
+                <TextView
+                    android:id="@+id/text_quake_primary_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:ellipsize="marquee"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    tools:text="San Francisco, CA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_quake_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Heading"
+                    android:gravity="end"
+                    tools:text="Mar 6, 2010"/>
+
+                <TextView
+                    android:id="@+id/text_quake_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Heading"
+                    android:gravity="end"
+                    tools:text="9:30 AM" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
