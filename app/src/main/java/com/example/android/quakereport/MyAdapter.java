@@ -26,11 +26,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     private List<EarthQuake> earthquakes = new ArrayList<>();
     private Context context;
-    public TextView earthQuakeMagnitude;
-
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
+        public TextView earthQuakeMagnitude;
         public TextView earthQuakePrimaryLocation;
         public TextView earthQuakeOffsetLocation;
         public TextView earthQuakeDate;
@@ -78,11 +77,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         });
 
         //code to show magnitude in ("0.0") formated form
-        earthQuakeMagnitude.setText(formatMagnitude(earthQuake.getmMagnitude()));
+        holder.earthQuakeMagnitude.setText(formatMagnitude(earthQuake.getmMagnitude()));
 
         // Set the proper background color on the magnitude circle.
         // Fetch the background from the TextView, which is a GradientDrawable.
-        GradientDrawable magnitudeCircle = (GradientDrawable)earthQuakeMagnitude.getBackground();
+        GradientDrawable magnitudeCircle = (GradientDrawable)holder.earthQuakeMagnitude.getBackground();
 
         // Get the appropriate background color based on the current earthquake magnitude
         int magnitudeColor = getMagnitudeColor(earthQuake.getmMagnitude());
